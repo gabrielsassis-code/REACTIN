@@ -1,0 +1,79 @@
+:root {
+  --space-black: #05070d;
+  --deep-blue: #091421;
+  --panel: rgba(9, 20, 33, 0.92);
+  --cyan: #56d8ff;
+  --blue: #1688ff;
+  --yellow: #ffe81f;
+  --text: #d7e5f3;
+  --muted: #91a7bb;
+  --line: rgba(86, 216, 255, 0.22);
+  --heading: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --sans: 'Segoe UI', system-ui, sans-serif;
+  font: 16px/1.6 var(--sans);
+  color: var(--text);
+  background: var(--space-black);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(40, 109, 180, 0.18), transparent 18rem),
+    radial-gradient(circle at 12% 48%, rgba(40, 109, 180, 0.08), transparent 24rem),
+    linear-gradient(180deg, #03040a 0%, #07101d 55%, #02030a 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.8;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(86,216,255,.6) 0 1px, transparent 1.5px);
+  background-size: 137px 137px, 211px 211px;
+  background-position: 0 0, 63px 91px;
+}
+
+button, input, textarea, select { font: inherit; }
+
+#root {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading);
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.7rem); }
+p { margin: 0; color: var(--muted); }
+a { color: inherit; }
+
