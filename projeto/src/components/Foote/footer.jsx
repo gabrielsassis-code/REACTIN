@@ -11,7 +11,9 @@ function Footer() {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/sobre-nos">Sobre Nós</NavLink>
+        <NavLink to="/servicos">Serviços</NavLink>
         <NavLink to="/fale-conosco">Fale Conosco</NavLink>
+        <NavLink to="/trabalhe-conosco">Trabalhe Conosco</NavLink>
       </nav>
       <p>&copy; {new Date().getFullYear()} Contabilidade Simples</p>
     </footer>
